@@ -13,7 +13,7 @@ import kotlinx.coroutines.delay
 
 
 @Composable
-fun Counter() {
+fun CounterProduceState() {
     val state = remember { mutableStateOf(0) }
     LaunchedEffect(key1 = Unit) {
         for (i in 1..10) {
@@ -30,7 +30,7 @@ fun Counter() {
 
 @SuppressLint("ProduceStateDoesNotAssignValue")
 @Composable
-fun CounterProduceState() {
+fun CounterProduceStateExample() {
     val state = produceState(initialValue = 0) {
         for (i in 1..10) {
             delay(1000)
